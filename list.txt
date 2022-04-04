@@ -1,9 +1,0 @@
-<li><a href="http://localhost:8888/zulmoc/index.php?id=1">소고기</a></li>
-<li><a href="http://localhost:8888/index.php?id=2">돼지고기</a></li>
-<li><a href="http://localhost:8888/index.php?id=3">닭고기</a></li>
-<li><a href="http://localhost:8888/index.php?id=4">해산물</a></li>
-<li><a href="http://localhost:8888/index.php?id=5">면요리</a></li>
-<li><a href="http://localhost:8888/index.php?id=6">빵/피자</a></li>
-<li><a href="http://localhost:8888/index.php?id=7">백반</a></li>
-<li><a href="http://localhost:8888/index.php?id=7">한정식</a></li>
-<li><a href="http://localhost:8888/index.php?id=7">코스요리</a></li>
