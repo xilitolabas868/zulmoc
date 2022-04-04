@@ -5,7 +5,7 @@
     <script src="zulmoc.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2Q6fvg0EorkmAiXPmui6"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8u4miwdm7j"></script>
     <link rel="stylesheet" href="zulmoc.css">
     <title>즐겁게 먹자, 즐먹! Zulmoc</title>
   </head>
