@@ -1,0 +1,9 @@
+body {
+  background-color: lightblue;
+}
+
+center {
+  color: navy;
+  margin: 0 auto;
+  font-size: 40;
+}
