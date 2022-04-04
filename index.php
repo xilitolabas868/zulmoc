@@ -10,7 +10,7 @@
     <title>즐겁게 먹자, 즐먹! Zulmoc</title>
   </head>
   <body>
-    <center><a href="http://localhost:8888/zulmoc/index.php">Zulmoc!</a></center>
+    <center><a href="./index.php">Zulmoc!</a></center>
     <nav>
         <ol>
           <?php
