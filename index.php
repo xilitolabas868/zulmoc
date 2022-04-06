@@ -1,7 +1,7 @@
 <?php
-  $conn = mysqli_connect("localhost:8889", "root", 111111);
-  mysqli_select_db($conn, "restaurants");
-  $sql = "SELECT lists.name FROM lists WHERE lists.category=".$_GET['id'];
+  $conn = mysqli_connect("us-cdbr-east-05.cleardb.net", "bc195eb7a037e3", "3847ef2c");
+  mysqli_select_db($conn, "heroku_1b40527361457ae");
+  $sql = "SELECT rest_lists.name FROM rest_lists WHERE rest_lists.category=".$_GET['id'];
   $result = mysqli_query($conn, $sql);
 ?>
 
