@@ -1,6 +1,6 @@
 <?php
-  $conn = mysqli_connect("us-cdbr-east-05.cleardb.net", "bc195eb7a037e3", "3847ef2c");
-  mysqli_select_db($conn, "heroku_1b40527361457ae");
+  $conn = mysqli_connect("u6354r3es4optspf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306", "iybbv1l9qr3o0pij", "kpw0l5fhpvn7008p");
+  mysqli_select_db($conn, "l2wzwrr3fajedz53");
 
 ?>
 
