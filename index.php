@@ -1,7 +1,7 @@
 <?php
   $conn = mysqli_connect("us-cdbr-east-05.cleardb.net", "bc195eb7a037e3", "3847ef2c");
   mysqli_select_db($conn, "heroku_1b40527361457ae");
-  $sql = "SELECT rest_lists.name FROM rest_lists WHERE rest_lists.category=".$_GET['id'];
+  $sql = "SELECT rest_lists.name FROM rest_lists WHERE rest_lists.category=".$_GET["id"];
   $result = mysqli_query($conn, $sql);
 ?>
 
@@ -33,7 +33,6 @@
 
     <article id="lists_of_one_category">
       <?php
-
         while( $row = mysqli_fetch_assoc($result)){
           echo '<li><a href="http://localhost/index.php?id='.$row['name'].'">'.$row['name'].'</a></li>'."\n";
         }
