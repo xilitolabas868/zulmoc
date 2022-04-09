@@ -1,10 +1,5 @@
 <?php
-  $hostname = "u6354r3es4optspf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306";
-  $admin_id = "iybbv1l9qr3o0pij";
-  $admin_pw = "kpw0l5fhpvn7008p";
-  $db_name = "l2wzwrr3fajedz53";
-  $conn = mysqli_connect($hostname, $admin_id, $admin_pw);
-  mysqli_select_db($conn, $db_name);
+  require('connection.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8u4miwdm7j"></script>
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>;;
     <link rel="stylesheet" href="zulmoc.css?after">
     <title>Zulmoc</title>
   </head>
@@ -40,11 +35,12 @@
 
     <article id="lists_of_one_category">
       <?php
-      $sql = "SELECT rest_lists.name FROM rest_lists WHERE rest_lists.category=".$_GET['id'];
-      $result = mysqli_query($conn, $sql);
-        while( $row = mysqli_fetch_assoc($result)){
-          echo '<li><a href="XXXXXXXXXXXXX'.$row['id'].'">'.$row['name'].'</a></li>'."\n";
-        }
+        $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
+        $sql = "SELECT rest_lists.id,name FROM rest_lists WHERE rest_lists.category={$filtered_id}";
+        $result = mysqli_query($conn, $sql);
+          while( $row = mysqli_fetch_assoc($result)){
+            echo '<li><a onclick="getRestaurantInfo('. $row['id'] .')" href="javascript:void(0);">'.$row['name'].'</a></li>'."\n";
+          }
       ?>
     </article>
 
@@ -56,5 +52,6 @@
     </div>
 
     <script type="text/javascript" src="map.js"></script>
+    <script type="text/javascript" src="get_spec.js"></script>
   </body>
 </html>
