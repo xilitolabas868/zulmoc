@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8u4miwdm7j"></script>
-    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>;;
+    <script  src="https://code.jquery.com/jquery-latest.min.js"></script>;;
     <link rel="stylesheet" href="zulmoc.css?after">
     <title>Zulmoc</title>
   </head>
