@@ -14,8 +14,7 @@ function getRestaurantInfo(restaurantId) {
     type: 'POST',
     data: {id: restaurantId},
     success: function(response) {
-      alert(response);
-      // $("#rest_description").html(response);
+      $("#rest_description").html(response);
     }
   });
 }
