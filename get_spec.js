@@ -7,7 +7,7 @@ function getRestaurantInfo(restaurantId) {
     success: function(data) {
       $("#rest_name").html(data.name);
       $("#rest_description").html(data.description);
-      showMap(data.lat, data.lng);
+      map.setCenter(new google.maps.LatLng(parseFloat(data[0].lat), parseFloat(data[0].lng)));
     }
   });
 }
