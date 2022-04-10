@@ -7,14 +7,7 @@ function getRestaurantInfo(restaurantId) {
     success: function(data) {
       $("#rest_name").html(data.name);
       $("#rest_description").html(data.description);
-      var pasedData = JSON.parse(data);
-      var marker_lat = parseFloat(pasedData.lat);
-      var marker_lng = parseFloat(pasedData.lng);
-      var map = new naver.maps.Map(document.getElementById('map'), {
-        zoom: 10,
-        center: new naver.maps.LatLng(marker_lat, marker_lng)
-      });
-      console.log(parsedData.lat);
+      showMap(data.lat, data.lng);
     }
   });
 }

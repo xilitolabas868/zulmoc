@@ -49,7 +49,8 @@
     <div id="rest_description">Description</div>
     <div id="latlng">latlng</div>
 
-    <!-- <script type="text/javascript" src="map.js"></script> -->
+    <script type="text/javascript" src="map.js"></script>
     <script type="text/javascript" src="get_spec.js"></script>
+    <script type="text/javascript" src="showmap.js"></script>
   </body>
 </html>
