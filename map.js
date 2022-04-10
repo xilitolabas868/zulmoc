@@ -1,8 +1,8 @@
-var mapOptions = {
-    center: new google.maps.LatLng(34.0000000000, 126),
-    zoom: 17
-};
+function initMap() {
+  var mapOptions = {
+      center: new google.maps.LatLng(37.547797, 127.029887),
+      zoom: 13
+  };
 
-var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-var marker
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
