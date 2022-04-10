@@ -6,6 +6,6 @@
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
-    echo $row['spec'];
+    echo json_encode($row);
    };
 ?>
