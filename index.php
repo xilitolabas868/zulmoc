@@ -49,6 +49,8 @@
         <div class="col-8">
           <h2 id="rest_name">Hello</h2>
           <div id="rest_description">Description</div>
+          <div><img id="rest_images" src="">
+          </div>
         </div>
       </div>
       <div class="row">
