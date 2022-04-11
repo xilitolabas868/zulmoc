@@ -7,7 +7,7 @@ function getRestaurantInfo(restaurantId) {
     success: function(data) {
       $("#rest_name").html(data.name);
       $("#rest_description").html(data.description);
-      var imagesource = "/zulmoc/restaurant_images/" + data.image_path_1;
+      var imagesource = "./restaurant_images/" + data.image_path_1;
       // console.log(imagesource);
       $("#rest_images").attr("src", imagesource);
       var mapOptions = {
