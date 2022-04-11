@@ -9,9 +9,14 @@ function getRestaurantInfo(restaurantId) {
       $("#rest_description").html(data.description);
       var mapOptions = {
           center: new google.maps.LatLng(data.lat, data.lng),
-          zoom: 11
+          zoom: 17
       };
       var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      new google.maps.Marker({
+        position: new google.maps.LatLng(data.lat, data.lng),
+        map,
+        title: "Hello world",
+      });
     }
   });
 }

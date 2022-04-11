@@ -53,7 +53,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="d-grid gap-2" id="map" style="height: 200px;"></div>
+          <div class="d-grid gap-2" id="map" style="height: 400px;"></div>
         </div>
       </div>
     </div>
