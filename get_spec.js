@@ -8,7 +8,6 @@ function getRestaurantInfo(restaurantId) {
       $("#rest_name").html(data.name);
       $("#rest_description").html(data.description);
       var imagesource = "./restaurant_images/" + data.image_path_1;
-      // console.log(imagesource);
       $("#rest_images").attr("src", imagesource);
       var mapOptions = {
           center: new google.maps.LatLng(data.lat, data.lng),

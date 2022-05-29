@@ -20,17 +20,14 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <ul>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=1">Beef</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=2">Pork</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=3">Chicken</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=4">Seafood</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=5">Noodles</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=6">Bread</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=7">Meal</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=8">Table</a></li>
-            <li id="category_lists" type="button" class="btn btn-success btn-sm my-1"><a class="link-light" href="./index.php?id=9">Course</a></li>
-          </ul>
+          <?php
+            $sql = "SELECT rest_cate.cat_num,cat_name FROM l2wzwrr3fajedz53.rest_cate";
+            $result = mysqli_query($conn, $sql);
+              while($row = mysqli_fetch_assoc($result)){
+                echo '<li id="category_lists" type="button" class="btn btn-success btn-sm my-3"><a class="link-light" href="./index.php?id='.$row['cat_num'].'">'.$row['cat_name'].'</a></li>';
+              }
+          ?>
+
         </div>
       </div>
       <div class="row">
@@ -40,7 +37,7 @@
               $filtered_id = mysqli_real_escape_string($conn, $_GET['id']);
               $sql = "SELECT rest_lists.id,name FROM rest_lists WHERE rest_lists.category={$filtered_id}";
               $result = mysqli_query($conn, $sql);
-                while( $row = mysqli_fetch_assoc($result)){
+                while($row = mysqli_fetch_assoc($result)){
                   echo '<li><a onclick="getRestaurantInfo('. $row['id'] .')" href="javascript:void(0);">'.$row['name'].'</a></li>'."\n";
                 }
             ?>
@@ -59,6 +56,8 @@
         </div>
       </div>
     </div>
+
+
 
 
     <script  src="https://code.jquery.com/jquery-latest.min.js"></script>
